@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p> <%= startingContent %> </p>
+
+
+<%  posts.forEach(function(post){ %>
+<div class="rows">
+  <div class="col-sm-3" style="padding:5px;">
+    <div class="card" style="width: 18rem;">
+      <img src="/images/pic.jpg" class="card-img-top" alt="Image">
+      <div class="card-body">
+        <h5 class="card-title" style="color:black;font-weigth:bold;"><%=post.title%></h5>
+        <p class="card-text" style="text-align: justify;">
+          <%=post.content.substring(0, 100) + " ..."%>
+        </p>
+        <a href="/posts/<%=post._id%>" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% }) %>
+
+
+<%- include("partials/footer"); -%>

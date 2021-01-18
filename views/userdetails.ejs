@@ -1,0 +1,99 @@
+<%- include('partials/header') %>
+  <div style = "text-align: center; margin: auto;">
+    <h2>Users Details</h2>    
+  </div>
+    <table style="width:100%" class="table table-striped" id="customers" >
+      <thead>
+        <tr>
+          <th>Delete</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%users.forEach(function(user){%>
+          <form action="/delete" method="POST">
+          <tr scope="row">
+            <td>
+              <div>
+                <input type="checkbox" name="id" value="<%=user._id%>" onchange="this.form.submit()">
+              </div>
+            </td>
+            <td scope="col"><%=user.name%></td>
+            <td scope="col"><%=user.email%></td>
+            <td scope="col"><%=user.mobile%></td>
+          </tr>
+        </form>
+          <%  }) %>
+      </tbody>
+
+</table>
+<div style = "text-align: center; margin: auto;">
+  <h2>Posts Details</h2>
+</div>
+<table style="width:100%" class="table table-striped" id="customers" >
+  <thead>
+    <tr>
+      <th>Delete</th>
+      <th>Post Title</th>
+      <th>Author Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% posts.forEach(function(post){ %>
+      <form action="/deletepost" method="POST">
+      <tr scope="row">
+        <td>
+          <div>
+            <input type="checkbox" name="postid" value="<%=post._id%>" onchange="this.form.submit()">
+          </div>
+        </td>
+        <td scope="col"><%=post.title%></td>
+        <td scope="col"><%=post.author%></td>
+      </tr>
+    </form>
+      <%  }) %>
+  </tbody>
+
+
+</table>
+
+
+
+<div style = "text-align: center; margin: auto;">
+  <h2>Contact Messages</h2>
+</div>
+<table style="width:100%" class="table table-striped" id="customers" >
+  <thead>
+    <tr>
+      <th>Delete</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% messages.forEach(function(message){ %>
+      <form action="/deletemsg" method="POST">
+      <tr scope="row">
+        <td>
+          <div>
+            <input type="checkbox" name="msgid" value="<%=message._id%>" onchange="this.form.submit()">
+          </div>
+        </td>
+        <td scope="col"><%=message.name%></td>
+        <td scope="col"><%=message.email%></td>
+        <td scope="col"><%=message.phone%></td>
+        <td scope="col"><%=message.msg%></td>
+      </tr>
+    </form>
+      <%  }) %>
+  </tbody>
+
+
+</table>
+
+
+<%- include('partials/footer') %>

@@ -1,0 +1,92 @@
+<%- include("partials/header"); -%>
+<section id="contact">
+    
+      <div class="well well-sm">
+        <h3><strong>Contact Us</strong></h3>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-7">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57379.65624084924!2d81.54638529851664!3d25.99333073405011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399afcc9d77559ff%3A0x7f4f2ee49bc55b47!2sAgai%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1610877719879!5m2!1sen!2sin" width="100%" height="315" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          
+        </div>
+
+        <div class="col-md-5">
+            <h4><strong>Get in Touch</strong></h4>
+          <form action="/contactmsg" method="POST">
+            <div class="form-group">
+              <input type="text" class="form-control" name="name"  placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" name="phone"  placeholder="Phone">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="msg" rows="3" placeholder="Message"></textarea>
+            </div>
+            <button class="btn btn-default" type="submit" name="button">
+                <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    
+</section>
+
+
+
+     
+      <div class="row">
+                      <div class="col-md-3">
+                          <div class="dbox w-100 text-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                          
+                          <i class="fa fa-map-marker" style="font-size:30px;color:blue;"></i>
+                      </div>
+                      <div class="text">
+                      <p><span>Address:</span> 173, Village and Post -Agai, Kurwar Sultanpur Uttar Pradesh</p>
+                    </div>
+                </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="dbox w-100 text-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                          
+                          <i class="fa fa-phone" style="font-size:30px;color:blue;"></i>
+                      </div>
+                      <div class="text">
+                      <p><span>Phone:</span> <a href="tel://919889055776">+ 91 9889055776</a></p>
+                    </div>
+                </div>
+                      </div>
+      
+      
+                      <div class="col-md-3">
+                          <div class="dbox w-100 text-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                          
+                          <i class="fa fa-paper-plane" style="font-size:30px;color:blue;"></i>
+                      </div>
+                      <div class="text">
+                      <p><span>Email:</span> <a href="mailto:ambuj01042000@gmail.com">ambuj01042000@gmail.com</a></p>
+                    </div>
+                </div>
+                      </div>
+                      <div class="col-md-3">
+                          
+                      <div class="dbox w-100 text-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                      <i class="fa fa-globe" style="font-size:30px;color:blue;"></i>
+                          
+                      </div>
+                      <div class="text">
+                      <p><span>Website</span> <a href="https://ambuj501.github.io">ambuj501.github.io</a></p>
+                       </div>
+                     </div>
+                          
+                      </div>
+      </div>
+      
+<%- include("partials/footer"); -%>
